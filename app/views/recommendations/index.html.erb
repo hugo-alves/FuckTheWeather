@@ -1,2 +1,27 @@
-<h1>Recommendations#index</h1>
-<p>Find me in app/views/recommendations/index.html.erb</p>
+<% @recommendations.each do |r| %>
+<p>Name: <%= r.name %> </p>
+<p>Address: <%= r.address %> </p>
+<p>Description: <%= r.description %> </p>
+<p>Category: <%= r.category %> </p>
+<p>Rating: <%= r.rating %> </p>
+<p> <%= link_to "show", recommendation_path(r) %> </p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
