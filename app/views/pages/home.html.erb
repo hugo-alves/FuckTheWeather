@@ -6,15 +6,15 @@
 <% content_for(:after_js) do %>
   <script>
   // $.holdReady( true );
-  $(document).ready(function() {
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
       var url = '<%= "#{recommendations_path}?longitude=" %>' + lon + "&latitude=" + lat;
       $("#myRecos").attr("href", url);
+      // window.location = url;
     })
   };
-});
   </script>
 <% end %>
