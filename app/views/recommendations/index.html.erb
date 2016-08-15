@@ -1,20 +1,24 @@
-<% @recommendations.each do |r| %>
-<p><%= cl_image_tag(r.photo) %></p>
-<p>Name: <%= r.name %> </p>
-<p>Address: <%= r.address %> </p>
-<p>Description: <%= r.description %> </p>
-<p>Category: <%= r.category %> </p>
-<p>Rating: <%= r.rating %> </p>
-<p> <%= link_to "show", recommendation_path(r) %> </p>
-<% end %>
 
-
-
-
-
-
-
-
+<div class="container" id="main">
+	<% @recommendations.each do |r| %>
+	  <div class="row">
+	    <div class="col-md-6 col-sm-6 col-md-offset-3" >
+	      <div class="well">
+	        <div class="panel panel-default">
+	          <div class="panel-heading"><%= link_to "show", recommendation_path(r), :class => "pull-right" %>
+	          	<h4><%= r.name %></h4></div>
+	            <div class="panel-body">
+	            <p><%= cl_image_tag r.photo, :class => "img-circle pull-right" %><%= r.address %></p>
+	            <div class="clearfix"></div>
+	            <hr>
+	            <%= r.description %>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	<% end %>
+</div>
 
 
 
