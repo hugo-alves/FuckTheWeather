@@ -4,7 +4,7 @@ class RecommendationsController < ApplicationController
   end
 
   def create
-    @recommendation = Recommendation.new
+    @recommendation = Recommendation.new(rec_params)
     @recommendation.save
   end
 
@@ -21,6 +21,13 @@ class RecommendationsController < ApplicationController
   private
 
   def rec_params
-    params.require(:recommendation).permit(:address, :weather_type, :day_time, :rating, :photo)
+    params.require(:recommendation).permit(:name,
+                                           :address,
+                                           :weather_type,
+                                           :day_time,
+                                           :rating,
+                                           :photo,
+                                           :category,
+                                           :description)
   end
 end
