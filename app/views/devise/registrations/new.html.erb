@@ -13,5 +13,5 @@
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
-
+<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %>
 <%= render "devise/shared/links" %>
