@@ -1,2 +1,14 @@
-<h1>Recommendations#new</h1>
-<p>Find me in app/views/recommendations/new.html.erb</p>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="grey-wrapper wrapper">
+      <%= simple_form_for @recommendation do |r| %>
+      <%= r.input :name %>
+      <%= r.input :description %>
+      <%= r.input :address %>
+      <%= r.input :day_time %>
+      <%= r.input :weather_type %>
+      <%= r.input :photo %>
+      <% end %>
+    </div>
+  </div>
+</div>
