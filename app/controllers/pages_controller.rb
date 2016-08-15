@@ -4,4 +4,8 @@ class PagesController < ApplicationController
     @recommendation = Recommendation.new
   end
 
+  def location
+    
+  end
+
 end
