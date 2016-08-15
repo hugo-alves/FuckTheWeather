@@ -1,2 +1,20 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to "Fuck the weather!!!", "#", id: "myRecos" %>
+
+<% content_for(:after_js) do %>
+  <script>
+  // $.holdReady( true );
+  $(document).ready(function() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      var url = '<%= "#{recommendations_path}?longitude=" %>' + lon + "&latitude=" + lat;
+      $("#myRecos").attr("href", url);
+    })
+  };
+});
+  </script>
+<% end %>

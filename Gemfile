@@ -19,6 +19,7 @@ gem 'autoprefixer-rails'
 
 gem 'country_select'
 gem 'omniauth-facebook'
+gem 'open-weather'
 
 group :development, :test do
   gem 'binding_of_caller'
