@@ -1,6 +1,19 @@
-<h1><%= @recommendation.name %></h1>
+<h1 class="text-center"><%= @recommendation.name %></h1>
 
-<p>Address: <%= @recommendation.address %> </p>
-<p>Description: <%= @recommendation.description %> </p>
-<p>Category: <%= @recommendation.category %> </p>
-<p>Rating: <%= @recommendation.rating %> </p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 ">
+      <div class="text-center">
+        <p><%= cl_image_tag(@recommendation.photo) %></p>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1">
+        <div class="text-left">
+        <p>Address: <%= @recommendation.address %> </p>
+        <p>Description: <%= @recommendation.description %> </p>
+        <p>Category: <%= @recommendation.category %> </p>
+        <p>Rating: <%= @recommendation.rating %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

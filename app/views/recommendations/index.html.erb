@@ -1,4 +1,5 @@
 <% @recommendations.each do |r| %>
+<p><%= cl_image_tag(r.photo) %></p>
 <p>Name: <%= r.name %> </p>
 <p>Address: <%= r.address %> </p>
 <p>Description: <%= r.description %> </p>
@@ -6,7 +7,6 @@
 <p>Rating: <%= r.rating %> </p>
 <p> <%= link_to "show", recommendation_path(r) %> </p>
 <% end %>
-
 
 
 
