@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :recommendations do
-    resources :bookmarks, only: [:create, :index]
+    resources :bookmarks, only: [:create, :index, :delete]
   end
   get 'location' => 'pages#location'
 
+  get 'users/:id/show', to: 'users#show', as: 'user_profile'
+  get 'users/:id/bookmarks', to: 'users#user_bookmarks', as: 'user_bookmarks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -5,7 +5,7 @@ class BookmarksController < ApplicationController
 
   def create
     # @user = current_user
-    current_user.bookmarks.create(recommendation_id: params[:id])
+    current_user.bookmarks.create(recommendation_id: params[:recommendation_id])
     redirect_to root_path
   end
 
