@@ -16,12 +16,9 @@
 	            <hr>
 	            <%= r.description %>
 	            <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
-<<<<<<< HEAD
-              <p><p>Rating: <%= rating_for r, "rating" %> </p></p>
-=======
+              <p>Rating: <%= rating_for r, "rating" %></p>
 	            <p><%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
 	            </p>
->>>>>>> a51881de9f2d78504dc87f0313723507c2938ae0
 	          </div>
 	        </div>
 	      </div>
