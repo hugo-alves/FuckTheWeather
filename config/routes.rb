@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
-  resources :recommendations
-
+  resources :recommendations do
+    resources :bookmarks, only: [:create, :index]
+  end
   get 'location' => 'pages#location'
 
   # The priority is based upon order of creation: first created -> highest priority.
