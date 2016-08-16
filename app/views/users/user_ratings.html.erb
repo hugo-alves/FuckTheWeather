@@ -1,0 +1,6 @@
+<div class="col-md-6">
+  <% @rates.each do |r| %>
+    <p><%= Recommendation.find(r.rateable_id).name %></p>
+    <p><%= r.stars %></p>
+  <% end %>
+</div>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'users/:id/show', to: 'users#show', as: 'user_profile'
   get 'users/:id/bookmarks', to: 'users#user_bookmarks', as: 'user_bookmarks'
+  get 'users/:id/ratings', to: 'users#user_ratings', as: 'user_ratings'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
