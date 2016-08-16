@@ -38,7 +38,17 @@
             </li>
             <li>
               <%= link_to user_profile_path(current_user) do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "My profile") %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "My Profile") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to user_bookmarks_path(current_user) do %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "My Bookmarks") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to user_ratings_path(current_user) do %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "My Ratings") %>
               <% end %>
             </li>
             <li>

@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     @bookmarks = current_user.bookmarks
   end
 
+  def user_ratings
+    @rates = current_user.ratings_given
+  end
+
   private
 
   def user_params
