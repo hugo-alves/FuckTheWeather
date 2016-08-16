@@ -1,6 +1,7 @@
 require 'open_weather'
 
 class RecommendationsController < ApplicationController
+  before_action :set_rec, only: [:show, :destroy, :update, :edit]
   def new
     @recommendation = Recommendation.new
   end
@@ -20,7 +21,14 @@ class RecommendationsController < ApplicationController
   end
 
   def show
-    @recommendation = Recommendation.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    @recommendation.update(rec_params)
+    redirect_to recommendation_path(@recommendation)
   end
 
   private
@@ -34,5 +42,9 @@ class RecommendationsController < ApplicationController
                                            :photo,
                                            :category,
                                            :description)
+  end
+
+  def set_rec
+    @recommendation = Recommendation.find(params[:id])
   end
 end
