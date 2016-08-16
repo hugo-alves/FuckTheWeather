@@ -13,7 +13,8 @@
               <p>Address: <%= @recommendation.address %> </p>
               <p>Description: <%= @recommendation.description %> </p>
               <p>Category: <%= @recommendation.category %> </p>
-              <p>Rating: <%= rating_for @recommendation, "rating" %> </p>
+              <p>Rating: <%= rating_for @recommendation, "rating", disabled: true %> </p>
+              <p>Rating votar: <%= rating_for @recommendation, "rating", disable_after_rate: false %> </p>
             </div>
           </div>
         </div>
