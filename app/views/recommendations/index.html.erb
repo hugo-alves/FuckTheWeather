@@ -1,3 +1,4 @@
+
 <div class="container" id="main">
 	<% @recommendations.each do |r| %>
 	  <div class="row">
@@ -15,8 +16,7 @@
 	            <hr>
 	            <%= r.description %>
 	            <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
-              <p>Rating: <%= rating_for r, "rating" %> </p>
-
+              <p>Rating: <%= rating_for r, "rating" %></p>
 	            <p><%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
 	            </p>
 	          </div>
