@@ -24,6 +24,8 @@ gem 'geocoder'
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 
+gem 'ratyrate'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
