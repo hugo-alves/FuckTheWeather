@@ -17,7 +17,8 @@ class RecommendationsController < ApplicationController
       params[:longitude],
       APPID: ENV['APPID']
     )
-    @recommendations = Recommendation.all
+    @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    
   end
 
   def destroy
