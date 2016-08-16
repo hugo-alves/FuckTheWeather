@@ -1,12 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="text-center">
+  <h1>Pages#home</h1>
+  <p id="test"></p>
 
-<%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger" %>
+  <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
 
+</div>
 <% content_for(:after_js) do %>
   <script>
-  // $.holdReady( true );
-
+  function testLink() {
+  if ($("#myRecos").attr("href") == "#") {
+    $("#myRecos").hide()
+    $("#test").html("Geting your location...");
+    console.log($("#myRecos").attr("href"))
+    setTimeout(testLink, 0500);
+  } else {
+    $("#test").hide();
+    $("#myRecos").show();
+  }
+}
+  testLink();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var lat = position.coords.latitude;
