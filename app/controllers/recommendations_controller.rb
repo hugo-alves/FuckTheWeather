@@ -11,8 +11,11 @@ class RecommendationsController < ApplicationController
   end
 
   def index
-    options = { APPID: "f28aa3a5e9ffc03b7de6e958db454097" }
-    @weather = OpenWeather::Current.geocode(params[:latitude], params[:longitude], options)
+    @weather = OpenWeather::Current.geocode(
+      params[:latitude],
+      params[:longitude],
+      APPID: ENV['APPID']
+    )
     @recommendations = Recommendation.all
   end
 
