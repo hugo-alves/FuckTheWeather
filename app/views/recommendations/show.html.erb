@@ -1,19 +1,22 @@
-<h1 class="text-center"><%= @recommendation.name %></h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 ">
-      <div class="text-center">
-        <p><%= cl_image_tag(@recommendation.photo) %></p>
-        </div>
-        <div class="col-sm-6 col-sm-offset-1">
-        <div class="text-left">
-        <p>Address: <%= @recommendation.address %> </p>
-        <p>Description: <%= @recommendation.description %> </p>
-        <p>Category: <%= @recommendation.category %> </p>
-        <p>Rating: <%= @recommendation.rating %> </p>
+<div id="mainContainer" class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><%= @recommendation.name %></div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <p><%= cl_image_tag(@recommendation.photo, class:"img-responsive", :crop => :fill)%></p>
+            </div>
+            <div class="panel-body">
+              <p>Address: <%= @recommendation.address %> </p>
+              <p>Description: <%= @recommendation.description %> </p>
+              <p>Category: <%= @recommendation.category %> </p>
+              <p>Rating: <%= @recommendation.rating %> </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
