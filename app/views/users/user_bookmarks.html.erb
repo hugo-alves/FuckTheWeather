@@ -1,3 +1,5 @@
+<h1>These are your bookmarks</h1>
+
 <% @bookmarks.each do |book| %>
   <% book = book.recommendation %>
   <%= render 'shared/recommendation', r: book %>
