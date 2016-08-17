@@ -25,6 +25,8 @@ gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 
 gem 'ratyrate'
+gem "gmaps4rails"
+gem "coffee-rails"
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"

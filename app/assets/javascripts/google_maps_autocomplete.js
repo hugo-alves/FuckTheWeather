@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var recommendation_address = $('#recommendation_address').get(0)
+  var recommendation_address = $('#search').get(0)
   if (recommendation_address) {
     var autocomplete = new google.maps.places.Autocomplete(recommendation_address, { types: ['geocode'] });
     google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
