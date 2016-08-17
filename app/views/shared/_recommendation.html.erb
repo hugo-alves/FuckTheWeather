@@ -3,22 +3,28 @@
     <div class="well">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <%= link_to "show", recommendation_path(r), :class => "pull-right" %>
           <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
-            <%= link_to "Bookmark", "javascript:$('#bookmark_form_#{r.id}').submit()" %>
+            <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right" %>
           <% end %>
-          <h4><%= r.name %></h4></div>
-          <div class="panel-body">
-          <p><%= cl_image_tag r.photo, :class => "img-circle pull-right" %><%= r.address %></p>
+          <%= link_to recommendation_path(r) do%>
+            <div id="card-name"><%= r.name %></div>
+            <p><%= cl_image_tag r.photo, :class => "img-responsive pull-right" %></p>
+          <% end %>
+        </div>
+        <div class="panel-body">
           <div class="clearfix"></div>
           <hr>
-          <%= r.description %>
+          <p><%= r.description %></p>
+          <p><%= r.address %></p>
+
           <% if params[:latitude].present? %>
             <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
           <% end %>
-          <p>Rating: <%= rating_for r, "rating" %></p>
-          <p><%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
-          </p>
+          <div class="footer-card">
+            <p><%= rating_for r, "rating" %></p>
+            <p><%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
+            </p>
+          </div>
         </div>
       </div>
     </div>
