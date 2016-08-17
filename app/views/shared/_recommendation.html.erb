@@ -8,7 +8,7 @@
           <% end %>
           <%= link_to recommendation_path(r) do%>
             <div class="card-name"><%= r.name %></div>
-            <p><%= cl_image_tag r.photo, :class => "img-responsive pull-right" %></p>
+            <p><%= cl_image_tag r.photo, :class => "img-responsive img-show" %></p>
           <% end %>
         </div>
         <div class="panel-body">
