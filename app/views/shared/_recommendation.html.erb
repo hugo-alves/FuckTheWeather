@@ -21,7 +21,7 @@
             <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
           <% end %>
           <div class="footer-card">
-            <p><%= rating_for r, "rating" %></p>
+            <p><%= rating_for r, "rating" , star_path: '/images/ratyrate'%></p>
             <p><%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
             </p>
           </div>
