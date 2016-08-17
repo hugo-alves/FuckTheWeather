@@ -12,12 +12,16 @@ class RecommendationsController < ApplicationController
   end
 
   def index
-    @weather = OpenWeather::Current.geocode(
-      params[:latitude],
-      params[:longitude],
-      APPID: ENV['APPID']
-    )
-    @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    if params[:search].nil?
+      @weather = OpenWeather::Current.geocode(
+        params[:latitude],
+        params[:longitude],
+        APPID: ENV['APPID']
+      )
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    else
+      @recommendations = Recommendation.near(params[:search], 1)
+    end
   end
 
   def destroy

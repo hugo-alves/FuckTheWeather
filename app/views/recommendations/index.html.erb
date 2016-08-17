@@ -1,5 +1,6 @@
 
 <div class="container" id="main">
+<%= render 'shared/form' %>
 	<% @recommendations.each do |r| %>
 		<%= render "shared/recommendation", r: r %>
 	<% end %>
