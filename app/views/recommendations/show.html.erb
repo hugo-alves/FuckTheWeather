@@ -10,10 +10,10 @@
               <p><%= cl_image_tag(@recommendation.photo, class:"img-responsive img-show", :crop => :fill)%></p>
             </div>
             <div class="panel-body">
-              <p id="description"><%= @recommendation.description %> </p>
-              <p id="address">Address:</p> <%= @recommendation.address %> 
-              <p id="category">Category: <%= @recommendation.category %> </p>
-              <p id="rating">Rating: <%= rating_for @recommendation, "rating", disabled: true, star_path: '/images/ratyrate' %> </p>
+              <p class="description"><%= @recommendation.description %> </p>
+              <p class="address">Address:</p> <%= @recommendation.address %> 
+              <p class="category">Category: <%= @recommendation.category %> </p>
+              <p class="rating">Rating: <%= rating_for @recommendation, "rating", disabled: true, star_path: '/images/ratyrate' %> </p>
             </div>
           </div>
         </div>
