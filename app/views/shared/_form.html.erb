@@ -3,7 +3,9 @@
     <div class="form-inline">
       <%= form_tag(recommendations_path, :method => 'get', id: 'search-form') do |f| %>
         <div class="form-group">
-          <%= text_field_tag :search, params[:search], placeholder: "Search Places", class:"form-control" %>
+
+          <%= text_field_tag :city, params[:search], placeholder: "City", class:"form-control" %>
+          <%= text_field_tag :country, params[:search], placeholder: "Country", class:"form-control" %>
         </div>
         <%= submit_tag "Search", class: "btn btn-primary"%>
       <% end %>
