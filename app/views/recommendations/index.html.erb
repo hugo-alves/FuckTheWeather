@@ -7,7 +7,7 @@
 	        <div class="panel panel-default">
 	          <div class="panel-heading"><%= link_to "show", recommendation_path(r), :class => "pull-right" %>
               <%= form_tag recommendation_bookmarks_path(r), method: :post do |f| %>
-                <%= link_to "Bookmark", "javascript:$('form').submit()" %>
+                <%= link_to "Bookmark", "javascript:$(this).submit()" %>
               <% end %>
 	          	<h4><%= r.name %></h4></div>
 	            <div class="panel-body">
