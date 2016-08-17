@@ -1,6 +1,9 @@
-<div class="col-md-6">
+<h1>These are your ratings</h1>
+
+<div>
   <% @rates.each do |r| %>
-    <p><%= Recommendation.find(r.rateable_id).name %></p>
-    <p><%= r.stars %></p>
+    <h2>You gave <%= r.stars %> stars to this place</h2>
+    <% r = Recommendation.find(r.rateable_id) %>
+    <%= render 'shared/recommendation', r: r %>
   <% end %>
 </div>
