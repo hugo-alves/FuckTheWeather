@@ -5,8 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
 Recommendation.create!(name: "Puppet Museum",
                    address: "Rua da Esperanca 146 Lisbon 1200-638, Portugal",
                    weather_type: "rain",
@@ -14,7 +12,7 @@ Recommendation.create!(name: "Puppet Museum",
                    day_time: "day",
                    category: "culture",
                    rating: 4,
-                   photo: "http://www.cm-lisboa.pt/uploads/pics/tt_address/ASC_8052-Museu-Marioneta.jpg" )
+                   remote_photo_url: "http://www.cm-lisboa.pt/uploads/pics/tt_address/ASC_8052-Museu-Marioneta.jpg" )
 Recommendation.create!(name: "Atelier-Museu Julio Pomar",
                    address: "Rua do Vale 7 Lisbon 1200-472, Portugal",
                    weather_type: "rain",
@@ -22,15 +20,15 @@ Recommendation.create!(name: "Atelier-Museu Julio Pomar",
                    day_time: "day",
                    category: "architecture",
                    rating: 5,
-                   photo: "http://jornalix.pt/wp-content/uploads/2016/01/AtelierMuseuJulioPomar_01-Copy.jpg")
+                   remote_photo_url: "http://jornalix.pt/wp-content/uploads/2016/01/AtelierMuseuJulioPomar_01-Copy.jpg")
 Recommendation.create!(name: "Igreja Santa Catarina",
                    address: "Calcada do Combro | Bairro Alto, Lisbon, Portugal",
                    weather_type: "rain",
-                   description: "My wife and I were walking on our way across Lisbon to the Estrella Basilica and thought this was a government building. We realized after looking more closely that it was a church, and didn't expect much since this was a fairly out-of-the-way location. We were shocked and amazed by the beauty of this church once we walked inside. Photos are not permitted, but I recommend stopping in to sit in a pew and slowly soak in the intricate details of the artistry on display all around you. One of my favorite churches even after visiting many throughout Europe.",
+                   description: "My wife and I were walking on our way across Lisbon to the Estrella Basilica and thought this was a government building. We realized after looking more closely that it was a church, and didn't expect much since this was a fairly out-of-the-way location. We were shocked and amazed by the beauty of this church once we walked inside. remote_Photo_urls are not permitted, but I recommend stopping in to sit in a pew and slowly soak in the intricate details of the artistry on display all around you. One of my favorite churches even after visiting many throughout Europe.",
                    day_time: "day",
                    category: "religious",
                    rating: 3,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-s/0a/07/1f/63/igreja-santa-catarina.jpg")
+                   remote_photo_url: "https://centroculturaldaponte.files.wordpress.com/2012/04/passeiolx201204c.jpg")
 Recommendation.create!(name: "Basilica da Estrela",
                    address: "Praca da Estrela, Lisbon 1200-667, Portugal",
                    weather_type: "rain",
@@ -38,7 +36,7 @@ Recommendation.create!(name: "Basilica da Estrela",
                    day_time: "day",
                    category: "Church",
                    rating: 5,
-                   photo: "http://static.viatecla.com/ezimut/share/2014-06/2014-06-25151016_b301f29c-bfab-444d-a00c-1e7a8c55278e$$DBDC69D3-8C43-4B75-BC1E-69612B5DAAAB$$1109542C-2846-44D9-B72F-0EBD98F2A23C$$LargeImage$$pt$$1.jpg")
+                   remote_photo_url: "http://static.viatecla.com/ezimut/share/2014-06/2014-06-25151016_b301f29c-bfab-444d-a00c-1e7a8c55278e$$DBDC69D3-8C43-4B75-BC1E-69612B5DAAAB$$1109542C-2846-44D9-B72F-0EBD98F2A23C$$LargeImage$$pt$$1.jpg")
 Recommendation.create!(name: "Academia das Ciências",
                    address: "Rua Academia das Ciencias n19, Lisbon 1249-122, Portugal",
                    weather_type: "rain",
@@ -46,7 +44,7 @@ Recommendation.create!(name: "Academia das Ciências",
                    day_time: "day",
                    category: "culture",
                    rating: 2,
-                   photo: "http://www.pavconhecimento.pt/roteiro3_locais_conhecimento/pt/img/01_academia_das_ciencias_b.jpg")
+                   remote_photo_url: "http://www.pavconhecimento.pt/roteiro3_locais_conhecimento/pt/img/01_academia_das_ciencias_b.jpg")
 Recommendation.create!(name: "Praca Marques do Pombal",
                    address: "Avenida da Liberdade Rotunda, Lisbonne, Portugal",
                    weather_type: "sun",
@@ -58,7 +56,7 @@ Recommendation.create!(name: "Praca Marques do Pombal",
                    day_time: "day",
                    category: "culture",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-p/0c/65/82/c5/20160805-071534-largejpg.jpg")
+                   remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lisboa_June_2013-9.jpg")
 Recommendation.create!(name: "Parque Eduardo VII",
                    address: "Avenida Sidónio País, Lisbonne 1070-051, Portugal",
                    weather_type: "sun",
@@ -66,7 +64,7 @@ Recommendation.create!(name: "Parque Eduardo VII",
                    day_time: "day",
                    category: "culture",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-p/0c/65/82/c5/20160805-071534-largejpg.jpg")
+                   remote_photo_url: "http://magazine.guiadacidade.pt/wp-content/uploads/2014/09/2011-07-26_09-41-03_0032_resize.jpg")
 Recommendation.create!(name: "Pastelaria Marques Pombal",
                    address: "Avenida Duque de Loule 113 119, Lisbonne, Portugal",
                    weather_type: "all",
@@ -74,7 +72,7 @@ Recommendation.create!(name: "Pastelaria Marques Pombal",
                    day_time: "day",
                    category: "restaurant",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-o/09/4f/15/e5/balcao-do-marques.jpg")
+                   remote_photo_url: "http://www.brisanorte.pt/media/lojas/pombal.jpg")
 Recommendation.create!(name: "Confeitaria Marques do Pombal",
                    address: "Avenida Liberdade 244, Lisbonne 1250-149, Portugal",
                    weather_type: "all",
@@ -86,7 +84,7 @@ Recommendation.create!(name: "Confeitaria Marques do Pombal",
                    day_time: "day",
                    category: "restaurant",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-w/0b/1f/45/0a/todo-lo-de-pasteleria.jpg")
+                   remote_photo_url: "http://img.pai.pt/mysite/media/29/76/2/09815f81-a419-481d-badf-02bd43da0ed0.png")
 Recommendation.create!(name: "Dote Cervejaria Moderna",
                    address: "Rua Barata Salgueiro 37A, Lisbonne 1250-042, Portugal",
                    weather_type: "all",
@@ -94,7 +92,7 @@ Recommendation.create!(name: "Dote Cervejaria Moderna",
                    day_time: "day",
                    category: "restaurant",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-p/09/88/7e/b4/dote.jpg")
+                   remote_photo_url: "http://www.nit.pt/uploads/article/8b0fa5a4-d088-496a-9566-501795b34eff.jpg")
 Recommendation.create!(name: "Sushi Cafe Avenida",
                    address: "Rua Barata Salgueiro 28, Lisbonne 1250-044, Portugal",
                    weather_type: "all",
@@ -102,7 +100,7 @@ Recommendation.create!(name: "Sushi Cafe Avenida",
                    day_time: "day",
                    category: "restaurant",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-w/05/97/f5/e3/sushi-cafe-avenida.jpg")
+                   remote_photo_url: "http://www.mood.pt/wp-content/uploads/2011/08/Sushi1.jpg")
 Recommendation.create!(name: "Guilty By Olivier",
                    address: "Rua Barata Salgueiro, 28, Lisboa, Portugal",
                    weather_type: "all",
@@ -114,7 +112,7 @@ Recommendation.create!(name: "Guilty By Olivier",
                    day_time: "day",
                    category: "restaurant",
                    rating: 2,
-                   photo: "https://media-cdn.tripadvisor.com/media/photo-w/01/fa/83/de/appetizer-guilty-as-charged.jpg")
+                   remote_photo_url: "https://i.ytimg.com/vi/QNndn-wR0F4/maxresdefault.jpg")
 Recommendation.create!(name: "Portuguese Cinematheque - Museum of Cinema",
                    address: "Rua Barata Salgueiro 39, 1269-059, Lisboa",
                    weather_type: "rain",
@@ -123,7 +121,7 @@ Recommendation.create!(name: "Portuguese Cinematheque - Museum of Cinema",
                    day_time: "day",
                    category: "culture",
                    rating: 2,
-                   photo: "https://lh6.googleusercontent.com/proxy/Yk0gT6ez4caO4nYOvLQpjSdRISbUukNNRR6ek75DxYPB_HX4FV1djY91zYi6EiH0O9gdQGJOdHyG6ooFjeUpZbeZvDQ0ng=w408-h267")
+                   remote_photo_url: "http://cineuropa.org/imgCache/2013/08/21/1377077843833_0560x0342_1377481812640.jpg")
 Recommendation.create!(name: "Reservatório da Mãe d'Água das Amoreiras",
                    address: "Praça das Amoreiras 10, 1250-020 Lisboa",
                    weather_type: "sun",
@@ -131,4 +129,4 @@ Recommendation.create!(name: "Reservatório da Mãe d'Água das Amoreiras",
                    day_time: "day",
                    category: "culture",
                    rating: 2,
-                   photo: "https://lh6.googleusercontent.com/proxy/ofK24MuvwTf6U5-X_7oRnRQP4ZexN5PGUl34Ck0OSKQ4CsovP9ivlaAzpP9DhD1ymwVnEbYTW55-SD1-x0-dCPGeGUalgVk=w408-h272")
+                   remote_photo_url: "http://www.portugalsemfim.com/culturaelazer/images/stories/patrimonio_portugues/maedaguaamoreiras1.jpg")

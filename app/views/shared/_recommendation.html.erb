@@ -7,7 +7,7 @@
             <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right" %>
           <% end %>
           <%= link_to recommendation_path(r) do%>
-            <div id="card-name"><%= r.name %></div>
+            <div class="card-name"><%= r.name %></div>
             <p><%= cl_image_tag r.photo, :class => "img-responsive pull-right" %></p>
           <% end %>
         </div>
