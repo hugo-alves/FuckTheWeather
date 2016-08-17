@@ -2,30 +2,24 @@
   <div class="text-center col-xs-12 banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path('thunder.jpg') %>);">
     <div class="banner-content">
       <h1>FUCK THE WEATHER</h1>
-    </div>
-  </div>
-</div>
-
-<div class="row text-center">
-  <div class="container">
-    <h1>Let's fuck the weather!</h1>
-    <div class="col-xs-12">
       <div class="btn-wrapper">
-        <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"huge-button", data: { loading_text: "Loading..."} %>
+        <div id="load-msg"></div>
+        <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
       </div>
     </div>
   </div>
 </div>
+
 <% content_for(:after_js) do %>
   <script>
   function testLink() {
   if ($("#myRecos").attr("href") == "#") {
     $("#myRecos").hide()
-    $("#test").html("Geting your location...");
+    $("#load-msg").html("<h3>Geting your location...</h3>");
     console.log($("#myRecos").attr("href"))
     setTimeout(testLink, 0500);
   } else {
-    $("#test").hide();
+    $("#load-msg").hide();
     $("#myRecos").show();
   }
 }
