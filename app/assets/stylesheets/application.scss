@@ -92,8 +92,11 @@ body {
 .panel-heading .glyphicon {
 	text-decoration: none;
 }
-.panel-heading #card-name {
-	text-decoration: none;
+.card-name {
+	padding-bottom: 10px;
+}
+.card-name a:hover {
+	text-decoration: none !important;
 }
 // .list-group-item:first-child,.list-group-item:last-child {
 //  border-radius:0;
