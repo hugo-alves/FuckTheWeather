@@ -57,6 +57,7 @@ Recommendation.create!(name: "Praca Marques do Pombal",
                    category: "culture",
                    rating: 2,
                    remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lisboa_June_2013-9.jpg")
+
 Recommendation.create!(name: "Parque Eduardo VII",
                    address: "Avenida Sidónio País, Lisbonne 1070-051, Portugal",
                    weather_type: "sun",
@@ -65,6 +66,7 @@ Recommendation.create!(name: "Parque Eduardo VII",
                    category: "culture",
                    rating: 2,
                    remote_photo_url: "http://magazine.guiadacidade.pt/wp-content/uploads/2014/09/2011-07-26_09-41-03_0032_resize.jpg")
+
 Recommendation.create!(name: "Pastelaria Marques Pombal",
                    address: "Avenida Duque de Loule 113 119, Lisbonne, Portugal",
                    weather_type: "all",
@@ -73,6 +75,7 @@ Recommendation.create!(name: "Pastelaria Marques Pombal",
                    category: "restaurant",
                    rating: 2,
                    remote_photo_url: "http://www.brisanorte.pt/media/lojas/pombal.jpg")
+
 Recommendation.create!(name: "Confeitaria Marques do Pombal",
                    address: "Avenida Liberdade 244, Lisbonne 1250-149, Portugal",
                    weather_type: "all",
@@ -85,6 +88,7 @@ Recommendation.create!(name: "Confeitaria Marques do Pombal",
                    category: "restaurant",
                    rating: 2,
                    remote_photo_url: "http://img.pai.pt/mysite/media/29/76/2/09815f81-a419-481d-badf-02bd43da0ed0.png")
+
 Recommendation.create!(name: "Dote Cervejaria Moderna",
                    address: "Rua Barata Salgueiro 37A, Lisbonne 1250-042, Portugal",
                    weather_type: "all",
@@ -93,6 +97,7 @@ Recommendation.create!(name: "Dote Cervejaria Moderna",
                    category: "restaurant",
                    rating: 2,
                    remote_photo_url: "http://www.nit.pt/uploads/article/8b0fa5a4-d088-496a-9566-501795b34eff.jpg")
+
 Recommendation.create!(name: "Sushi Cafe Avenida",
                    address: "Rua Barata Salgueiro 28, Lisbonne 1250-044, Portugal",
                    weather_type: "all",
@@ -101,6 +106,7 @@ Recommendation.create!(name: "Sushi Cafe Avenida",
                    category: "restaurant",
                    rating: 2,
                    remote_photo_url: "http://www.mood.pt/wp-content/uploads/2011/08/Sushi1.jpg")
+
 Recommendation.create!(name: "Guilty By Olivier",
                    address: "Rua Barata Salgueiro, 28, Lisboa, Portugal",
                    weather_type: "all",
@@ -113,6 +119,7 @@ Recommendation.create!(name: "Guilty By Olivier",
                    category: "restaurant",
                    rating: 2,
                    remote_photo_url: "https://i.ytimg.com/vi/QNndn-wR0F4/maxresdefault.jpg")
+
 Recommendation.create!(name: "Portuguese Cinematheque - Museum of Cinema",
                    address: "Rua Barata Salgueiro 39, 1269-059, Lisboa",
                    weather_type: "rain",
@@ -122,6 +129,7 @@ Recommendation.create!(name: "Portuguese Cinematheque - Museum of Cinema",
                    category: "culture",
                    rating: 2,
                    remote_photo_url: "http://cineuropa.org/imgCache/2013/08/21/1377077843833_0560x0342_1377481812640.jpg")
+
 Recommendation.create!(name: "Reservatório da Mãe d'Água das Amoreiras",
                    address: "Praça das Amoreiras 10, 1250-020 Lisboa",
                    weather_type: "sun",
@@ -130,3 +138,4 @@ Recommendation.create!(name: "Reservatório da Mãe d'Água das Amoreiras",
                    category: "culture",
                    rating: 2,
                    remote_photo_url: "http://www.portugalsemfim.com/culturaelazer/images/stories/patrimonio_portugues/maedaguaamoreiras1.jpg")
+
