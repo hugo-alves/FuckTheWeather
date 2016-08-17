@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6 col-sm-6 col-md-offset-3" >
+  <div class="col-md-6 col-md-offset-3" >
     <div class="well">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -8,13 +8,13 @@
           <% end %>
           <%= link_to recommendation_path(r) do%>
             <div class="card-name"><%= r.name %></div>
-            <p><%= cl_image_tag r.photo, :class => "img-responsive pull-right" %></p>
+            <p><%= cl_image_tag r.photo, :class => "img-responsive img-show" %></p>
           <% end %>
         </div>
         <div class="panel-body">
           <div class="clearfix"></div>
           <hr>
-          <p><%= r.description %></p>
+          <p class="description"><%= r.description %></p>
           <p><%= r.address %></p>
 
           <% if params[:latitude].present? %>
