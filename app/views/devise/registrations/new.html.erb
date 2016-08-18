@@ -3,30 +3,37 @@
 <div id="mainContainer" class="container">
   <div class="panel panel-default">
     <div class="panel-heading"><h2>Sign up</h2></div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-              </div>
-              <div class="panel-body">
-                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                <%= f.error_notification %>
-
-                <div class="form-inputs">
-                  <%= f.input :email, required: true, autofocus: true %>
-                  <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-                  <%= f.input :password_confirmation, required: true %>
-                </div>
-                <div class="form-actions">
-                  <%= f.button :submit, "Sign up" %>
-                </div>
-              <% end %>
-              <div style="margin-top:10px">
-              <%= link_to "acebook",  user_facebook_omniauth_authorize_path, class:"btn btn-default btn-facebook fa fa-facebook"%>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
             </div>
+            <div class="panel-body">
+              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true %>
+                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+                <%= f.input :password_confirmation, required: true %>
+              </div>
+              <ul class="text-center list-inline">
+               <li ><div class="form-actions btn-block" style="margin-right:20px" >
+                <%= f.button :submit, "Sign up" %>
+              </div></li>
+              <li><div style="margin:10px">
+                <%= link_to user_facebook_omniauth_authorize_path(:facebook) do %>
+                <div class=" btn btn-default btn-social btn-facebook">
+                  <i class="fa fa-facebook"></i> Sign up with Facebook
+                </div>
+                <% end %>
+              </li>
+              <% end %>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
