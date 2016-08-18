@@ -18,12 +18,18 @@
                   <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
                   <%= f.input :password_confirmation, required: true %>
                 </div>
-                <div class="form-actions">
+                <div class="btn-block">
                   <%= f.button :submit, "Sign up" %>
                 </div>
               <% end %>
-              <div style="margin-top:10px">
-              <%= link_to "acebook",  user_facebook_omniauth_authorize_path, class:"btn btn-default btn-facebook fa fa-facebook"%>
+              <div style="margin-top:10px" class="">
+
+              <%= link_to user_facebook_omniauth_authorize_path(:facebook) do %>
+              <div class="btn btn-lg btn-block btn-social btn-facebook">
+              <i class="fa fa-facebook"></i> Sign in with Facebook
+              </div>
+              <% end %>
+
             </div>
           </div>
         </div>
