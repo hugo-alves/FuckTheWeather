@@ -15,11 +15,19 @@
                   <%= f.input :password, required: false %>
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                 </div>
-                <div class="form-actions">
-                  <%= f.button :submit, "Log in" %>
+              <ul class="text-center list-inline">
+               <li ><div class="form-actions btn-block" style="margin-right:20px" >
+                <%= f.button :submit, "Log in" %>
+              </div></li>
+              <li><div style="margin:10px">
+                <%= link_to user_facebook_omniauth_authorize_path(:facebook) do %>
+                <div class=" btn btn-default btn-social btn-facebook">
+                  <i class="fa fa-facebook"></i> Log in with Facebook
                 </div>
                 <% end %>
-                <%= render "devise/shared/links" %>
+              </li>
+              <% end %>
+            </ul>
               </div>
           </div>
         </div>
