@@ -15,14 +15,15 @@
   function testLink() {
   if ($("#myRecos").attr("href") == "#") {
     $("#myRecos").hide()
-    $("#load-msg").html("<h3>Geting your location...</h3>");
+    $("#load-msg").html("<h3>Getting your location...</h3>");
     console.log($("#myRecos").attr("href"))
     setTimeout(testLink, 0500);
   } else {
     $("#load-msg").hide();
-    $("#myRecos").show();
+    // $("#myRecos").show();
   }
-}
+};
+  $("#myRecos").click(function() {
   testLink();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -30,8 +31,9 @@
       var lon = position.coords.longitude;
       var url = '<%="#{recommendations_path}?longitude=" %>' + lon + "&latitude=" + lat;
       $("#myRecos").attr("href", url);
-      // window.location = url;
+      window.location = url;
     })
   };
+})
   </script>
 <% end %>
