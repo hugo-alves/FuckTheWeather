@@ -7,16 +7,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0px;
-}
+
 .banner h1 {
+  margin-top: 0;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-}
+  };
 .banner p {
   font-size: 20px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
+  }
+
+}
+.banner-content {
+  margin-top:40px;
+}
+#banner-wrapper {
+  z-index:-1;
+  position: absolute;
+  top:0;
+  width: 100%;
+  margin: 0;
 }
