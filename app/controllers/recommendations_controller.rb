@@ -12,21 +12,17 @@ class RecommendationsController < ApplicationController
   end
 
   def index
-    if params[:city].nil?
-      @weather = OpenWeather::Current.geocode(
-        params[:latitude],
-        params[:longitude],
-        APPID: ENV['APPID']
-      )
-      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    @weather = OpenWeather::Current.geocode(
+      params[:latitude],
+      params[:longitude],
+      APPID: ENV['APPID']
+    )
+    @type = @weather["weather"][0]["main"]
+    if @type == "Clear"
+      # Selects places around that matches weather conditions
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
     else
-      @weather = OpenWeather::Current.geocode(
-        "#{params[:city]}",
-        "#{params[:country]}",
-        APPID: ENV['APPID']
-      )
-      # raise
-      @recommendations = Recommendation.near("#{params[:city]}, #{params[:country]}", 1)
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
     end
   end
 
@@ -59,5 +55,9 @@ class RecommendationsController < ApplicationController
 
   def set_rec
     @recommendation = Recommendation.find(params[:id])
+  end
+
+  def weather_filter(weather)
+
   end
 end

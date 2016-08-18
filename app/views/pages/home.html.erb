@@ -1,11 +1,12 @@
-<div class="row">
+<div class="row" id="banner-wrapper" >
   <div class="text-center col-xs-12 banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path('thunder.jpg') %>);">
     <div class="banner-content">
-      <h1>FUCK THE WEATHER</h1>
+      <h1>Don't let the weather fuck your vacations</h1>
       <div class="btn-wrapper">
         <div id="load-msg"></div>
         <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -15,14 +16,15 @@
   function testLink() {
   if ($("#myRecos").attr("href") == "#") {
     $("#myRecos").hide()
-    $("#load-msg").html("<h3>Geting your location...</h3>");
+    $("#load-msg").html("<h3>Getting your location...</h3>");
     console.log($("#myRecos").attr("href"))
     setTimeout(testLink, 0500);
   } else {
     $("#load-msg").hide();
-    $("#myRecos").show();
+    // $("#myRecos").show();
   }
-}
+};
+  $("#myRecos").click(function() {
   testLink();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -30,8 +32,9 @@
       var lon = position.coords.longitude;
       var url = '<%="#{recommendations_path}?longitude=" %>' + lon + "&latitude=" + lat;
       $("#myRecos").attr("href", url);
-      // window.location = url;
+      window.location = url;
     })
   };
+})
   </script>
 <% end %>
