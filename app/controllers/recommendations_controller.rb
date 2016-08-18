@@ -17,7 +17,13 @@ class RecommendationsController < ApplicationController
       params[:longitude],
       APPID: ENV['APPID']
     )
-    @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    @type = @weather["weather"][0]["main"]
+    if @type == "Clear"
+      # Selects places around that matches weather conditions
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    else
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
+    end
   end
 
   def destroy
@@ -49,5 +55,9 @@ class RecommendationsController < ApplicationController
 
   def set_rec
     @recommendation = Recommendation.find(params[:id])
+  end
+
+  def weather_filter(weather)
+
   end
 end
