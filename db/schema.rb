@@ -80,8 +80,7 @@ ActiveRecord::Schema.define(version: 20160816115758) do
     t.string   "weather_type"
     t.text     "description"
     t.string   "day_time"
-    t.string   "category"
-    t.integer  "rating"
+    t.string   "category"    t.integer  "rating"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "photo"
