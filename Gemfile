@@ -27,7 +27,6 @@ gem 'carrierwave'
 gem 'ratyrate'
 gem "gmaps4rails"
 gem "coffee-rails"
-gem 'pundit'
 gem "simple_token_authentication"
 
 source 'https://rails-assets.org' do
