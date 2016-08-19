@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   get 'users/:id/bookmarks', to: 'users#user_bookmarks', as: 'user_bookmarks'
   get 'users/:id/ratings', to: 'users#user_ratings', as: 'user_ratings'
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :recommendations, only: [ :create ]
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
