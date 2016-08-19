@@ -6,6 +6,7 @@ class RecommendationPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    request.header['X-Token']
+    params[:token] == ENV['API_CREATE_RECOS']
   end
 end
