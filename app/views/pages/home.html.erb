@@ -6,10 +6,20 @@
         <div id="load-msg"></div>
         <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
       </div>
+
+      <% if user_signed_in? %>
+        <p>Logado</p>
+      <% else %>
+        <%= link_to "Register", new_user_registration_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#signUpModal', method: :get %>
+        <%= link_to "Login", new_user_session_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#logInModal', method: :get %>
+      <% end %>
     </div>
     </div>
   </div>
 </div>
+
+<%= render 'modal' %>
+<%= render 'login_modal' %>
 
 <% content_for(:after_js) do %>
   <script>
