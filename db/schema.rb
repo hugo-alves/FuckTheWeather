@@ -88,8 +88,8 @@ ActiveRecord::Schema.define(version: 20160819113736) do
     t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "source_id"
     t.string   "bairro"
+    t.integer  "source_id"
   end
 
   create_table "users", force: :cascade do |t|

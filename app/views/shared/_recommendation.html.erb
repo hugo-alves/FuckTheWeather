@@ -1,28 +1,28 @@
 <%= link_to recommendation_path(r) do%>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12">
-      <div class="card"><p><%= cl_image_tag(r.photo, :class => "img-responsive img-show") %></p>
-      <div class="card-name">
-           <h4><%= r.name %></h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div class="card"><p><%= cl_image_tag(r.photo, :class => "img-responsive img-show") %></p>
+          <div class="card-name">
+             <h4><%= r.name %></h4>
+          </div>
+          <div class="card-category">
+            <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
+            <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right" %>
+            <% end %>
+          </div>
+          <div class="card-description">
+            <p><%= r.address %></p>
+            <% if params[:latitude].present? %>
+            <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
+            <% end %></p>
+            <p><%= rating_for r, "rating" , star_path: '/images/ratyrate'%></p>
+          </div>
+            <p class="card-user">
+            <%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
+            </p>
+        </div>
       </div>
-        <div class="card-category">
-         <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
-         <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right" %>
-         <% end %>
-       </div>
-       <div class="card-description">
-        <p><%= r.address %></p>
-        <% if params[:latitude].present? %>
-        <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
-        <% end %></p>
-        <p><%= rating_for r, "rating" , star_path: '/images/ratyrate'%></p>
-      </div>
-      <p class="card-user">
-        <%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
-      </p>
     </div>
   </div>
-</div>
-</div>
 <% end %>
