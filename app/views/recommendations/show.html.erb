@@ -1,17 +1,18 @@
 
 <div id="mainContainer" class="container-fluid">
-  <div class="panel panel-default">
-    <div class="panel-heading"><%= @recommendation.name %></div>
+  <div class="panel panel-default wrapper-blue">
+  <div class="row">
+        <div class="col-xs-12 col-sm-12">
+    <div class="panel-heading wrapper-blue"><%= @recommendation.name %></div>
     <div class="panel-body">
-      <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
+
           <div class="panel panel-default">
             <div class="panel-heading">
               <p><%= cl_image_tag(@recommendation.photo, class:"img-responsive img-show", :crop => :fill)%></p>
             </div>
             <div class="panel-body">
               <p class="description"><%= @recommendation.description %> </p>
-              <p class="address">Address:</p> <%= @recommendation.address %> 
+              <p class="address">Address:</p> <%= @recommendation.address %>
               <p class="category">Category: <%= @recommendation.category %> </p>
               <p class="rating">Rating: <%= rating_for @recommendation, "rating", disabled: true, star_path: '/images/ratyrate' %> </p>
             </div>
