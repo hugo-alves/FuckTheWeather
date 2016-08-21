@@ -1,0 +1,25 @@
+
+<div class="row" id="banner-wrapper" >
+  <div class="text-center col-xs-12 banner" id="banner-img" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path('thunder.jpg') %>);">
+    <div id="canvasHolder">
+      <div id="canvas">
+        <div class="banner-content">
+          <h1>Don't let the weather fuck your vacations</h1>
+          <div class="btn-wrapper">
+            <div id="load-msg"></div>
+            <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
+          </div>
+      <% if user_signed_in? %>
+        <p>Logado</p>
+      <% else %>
+        <%= link_to "Register", new_user_registration_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#signUpModal', method: :get %>
+        <%= link_to "Login", new_user_session_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#logInModal', method: :get %>
+      <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'modal' %>
+<%= render 'login_modal' %>

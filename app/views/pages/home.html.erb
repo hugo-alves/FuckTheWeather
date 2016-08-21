@@ -1,28 +1,35 @@
-<div class="row" id="banner-wrapper" >
-  <div class="text-center col-xs-12 banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%=image_path('thunder.jpg') %>);">
-    <div class="banner-content">
-      <h1>Don't let the weather fuck your vacations</h1>
-      <div class="btn-wrapper">
-        <div id="load-msg"></div>
-        <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
-      </div>
 
+<div class="row">
+  <div class="banner col-xs-12">
+
+    <div id="home">
+
+      <img id="background"/>
+  <!-- <canvas id="canvas"></canvas> -->
+    <div class="container text-center">
+      <h1>Don't let the weather fuck your vacations</h1>
+      <div id="ftw">
+        <%= link_to "Fuck the weather!!!", "#", id: "myRecos", class:"btn btn-lg btn-danger", data: { loading_text: "Loading..."} %>
+      <div id="load-msg">
       <% if user_signed_in? %>
-        <p>Logado</p>
+
       <% else %>
-        <%= link_to "Register", new_user_registration_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#signUpModal', method: :get %>
-        <%= link_to "Login", new_user_session_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#logInModal', method: :get %>
+        <%= link_to "Register", new_user_registration_path, class:"btn btn-default", remote: true, 'data-toggle' => 'modal', 'data-target' => '#signUpModal', method: :get %>
+          <%= link_to "Login", new_user_session_path, remote: true, 'data-toggle' => 'modal', 'data-target' => '#logInModal', method: :get, class:"btn btn-success" %>
       <% end %>
-    </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+</div>
 <%= render 'modal' %>
 <%= render 'login_modal' %>
 
 <% content_for(:after_js) do %>
   <script>
+  $(document).ready(run())
   function testLink() {
   if ($("#myRecos").attr("href") == "#") {
     $("#myRecos").hide()
@@ -46,5 +53,19 @@
     })
   };
 })
+function run() {
+  var image = document.getElementById('background');
+  image.onload = function() {
+      var engine = new RainyDay({
+        image: this,
+        blur: 25
+      });
+      engine.rain([ [1, 2, 8000] ]);
+      engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+      parentElement: document.getElementById('home');
+  };
+  image.crossOrigin = 'anonymous';
+  image.src = "<%= image_path ('lisbon2.jpeg') %>";
+}
   </script>
 <% end %>
