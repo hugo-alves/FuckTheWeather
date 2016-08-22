@@ -1,0 +1,14 @@
+function run() {
+    var image = document.getElementById('background');
+    image.onload = function() {
+        var engine = new RainyDay({
+          image: this,
+          blur: 25
+        });
+        engine.rain([ [1, 2, 8000] ]);
+        engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+        parentElement: document.getElementById('home');
+    };
+    image.crossOrigin = 'anonymous';
+    image.src = "<%= image_path ('lisbon2.jpeg') %>";
+  }
