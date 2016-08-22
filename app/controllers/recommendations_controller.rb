@@ -18,8 +18,21 @@ class RecommendationsController < ApplicationController
       APPID: ENV['APPID']
     )
     @type = @weather["weather"][0]["main"]
-    if @type == "Clear"
-      # Selects places around that matches weather conditions
+
+    case @type
+    when "Clear"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Sun" || place.weather_type.capitalize == "Rain" || place.weather_type.capitalize == "All"}
+    when "Rain"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    when "Thunderstorm"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    when "Drizzle"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    when "Snow"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    when "Clouds"
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
+    when "Extreme"
       @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
     else
       @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1)
