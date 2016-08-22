@@ -1,5 +1,5 @@
 #card-name {
-  font-size: 32px;
+  font-size: 100%;
   margin-bottom: 20px;
   text-decoration: none;
 }
@@ -12,7 +12,7 @@
 }
 
 .card {
-  height: 100%;
+  width: 100%;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
@@ -23,9 +23,10 @@
   position: relative;
   margin-top: 20px;
   height: 100%;
-  width: 200px;
+  width: 100%;
   text-overflow: ellipsis;
   overflow:hidden;
+  font-size: 2vh;
 }
 
 .card-user {
@@ -51,10 +52,10 @@
   left: 10px;
 }
 .card-description h2 {
-  font-size: 24px;
+  font-size: 2vh;
 }
 .card-description p {
-  font-size: 13px;
+  font-size: 2vh;
   }
 .card-link {
   position: absolute;
