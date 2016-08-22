@@ -19,6 +19,7 @@ class RecommendationsController < ApplicationController
     )
     @type = @weather["weather"][0]["main"]
     if @type == "Clear"
+      raise
       # Selects places around that matches weather conditions
       @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
     else
