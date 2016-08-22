@@ -12,13 +12,22 @@
 }
 
 .card {
-  height: 270px;
+  height: 100%;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
   position: relative;
   margin-top: 20px;
 }
+.card-info {
+  position: relative;
+  margin-top: 20px;
+  height: 100%;
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
