@@ -14,6 +14,7 @@
             <% if params[:latitude].present? %>
               <p>Distance: <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> meters</p>
             <% end %>
+            <p class="rating"><%= rating_for r, "rating", disabled: true, star_path: '/images/ratyrate' %> </p>
 
           </div>
           <p class="card-user">
