@@ -1,9 +1,13 @@
 
 <%= render 'shared/form' %>
 <div class="container" id="main">
-  <div class="weather-report">
-    <h4>Weather conditions near you: <%= @weather["weather"][0]["main"] %></h4>
-    <h2>Here are some recommendations sorted by distance</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="weather-report">
+        <h4>Weather conditions near you: <%= @weather["weather"][0]["main"] %></h4>
+        <h2>Here are some recommendations sorted by distance</h2>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container">
