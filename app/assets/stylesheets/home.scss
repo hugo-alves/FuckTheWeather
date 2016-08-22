@@ -1,0 +1,57 @@
+@import "config/variables";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS
+@import "layout/index";
+@import "components/index";
+@import "pages/index";
+@import "vendor/index";
+
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+#home{
+  height: 400px;
+  padding: 0px;
+  overflow:hidden;
+}
+#home img{
+  position:absolute;
+  z-index:-1;
+  width: 100%;
+  height: 100%;
+}
+#home h1, #home h2{
+  position:relative;
+  z-index:1;
+  color: #FFF;
+}
+
+#ftw {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#myRecos {
+  margin-top:40px;
+  font-size: 3em;
+  padding: 20px 10px;
+  border-radius: 4px;
+  z-index:1;
+  overflow: hidden;
+  position: relative;
+}
+
+#load-msg {
+  margin-top: 20px;
+}
