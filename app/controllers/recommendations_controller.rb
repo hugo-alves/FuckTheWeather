@@ -12,7 +12,6 @@ class RecommendationsController < ApplicationController
   end
 
   def index
-    raise
     @weather = OpenWeather::Current.geocode(
       params[:latitude],
       params[:longitude],
