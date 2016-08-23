@@ -21,7 +21,9 @@ body {
  }
 
 #home{
-  height: 400px;
+  height: 100vh;
+  display:  flex;
+  align-items: center;
   padding: 0px;
   overflow:hidden;
 }
@@ -45,8 +47,10 @@ body {
 #myRecos {
   margin-top:40px;
   font-size: 3em;
-  padding: 20px 10px;
-  border-radius: 4px;
+  padding: 20px 15px;
+  border-radius: 50px;
+  font-weight:  100;
+  font-size:  25px;
   z-index:1;
   overflow: hidden;
   position: relative;
@@ -54,4 +58,8 @@ body {
 
 #load-msg {
   margin-top: 20px;
+  font-weight:  100;
+  font-family: $base-font;
+  font-size:  25px;
+  color: white;
 }
