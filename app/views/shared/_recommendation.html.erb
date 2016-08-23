@@ -29,5 +29,22 @@
       </div>
     </div>
 
-  <% end %>
+    <% if r.weather_type == "clear"%>
+      <%= icon_weather("clear") %>
+    <% elsif r.weather_type == "clouds"%>
+      <%= icon_weather("clouds") %>
+    <% elsif r.weather_type == "rain"%>
+      <%= icon_weather("clear") %>
+      <%= icon_weather("drizzle") %>
+      <%= icon_weather("rain") %>
+    <% elsif r.weather_type == "drizzle"%>
+      <%= icon_weather("clear") %>
+      <%= icon_weather("drizzle") %>
+    <% elsif r.weather_type == "storm"%>
+      <%= icon_weather("clear") %>
+      <%= icon_weather("drizzle") %>
+      <%= icon_weather("rain") %>
+      <%= icon_weather("thunderstorm") %>
+    <% end %>
 
+<% end %>
