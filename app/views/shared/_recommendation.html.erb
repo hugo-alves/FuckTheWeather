@@ -5,8 +5,6 @@
   <div class="card-body">
     <div class="card-picture" style="background-image: url('<%= cl_image_path(r.photo, width: 500, height: 300) %>')">
       <div class="card-hover">
-        <p><%= short_description(r.description) %></p>
-
         <ul class="list-inline text-center hover-btns">
           <li>
             <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
@@ -46,11 +44,11 @@
               <%= icon_weather("clouds") %>
             <% elsif r.weather_type == "rain"%>
               <%= icon_weather("clear") %>
-              <%= icon_weather("drizzle") %>
+              <%= icon_weather("clouds") %>
               <%= icon_weather("rain") %>
             <% elsif r.weather_type == "drizzle"%>
               <%= icon_weather("clear") %>
-              <%= icon_weather("drizzle") %>
+              <%= icon_weather("clouds") %>
             <% elsif r.weather_type == "storm"%>
               <%= icon_weather("clear") %>
               <%= icon_weather("drizzle") %>
