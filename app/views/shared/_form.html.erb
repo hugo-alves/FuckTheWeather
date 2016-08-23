@@ -3,11 +3,11 @@
     <div class="form-inline">
       <%= form_tag(recommendations_path, :method => 'get', id: 'search-form') do |f| %>
         <div class="form-group">
-          <%= text_field_tag :city, params[:search], placeholder: "Enter address", class:"form-control" %>
+          <%= text_field_tag :city, params[:search], placeholder: "Enter a new address", class:"form-control input-lg" %>
           <%= hidden_field_tag :latitude %>
           <%= hidden_field_tag :longitude %>
         </div>
-        <%= submit_tag "Search", class: "btn btn-primary"%>
+        <%= submit_tag "Search", class: "btn btn-warning btn-lg"%>
       <% end %>
     </div>
   </div>

@@ -16,6 +16,8 @@ module ApplicationHelper
       render "icons/cloudy"
     when "extreme"
       render "icons/storm"
+    when "cold"
+      render "icons/cold"
     else
       render "icons/hot"
     end

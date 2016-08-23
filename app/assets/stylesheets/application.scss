@@ -28,13 +28,43 @@ author: bootply.com
 	text-align: center;
 	padding-bottom: 20px;
 	margin-top: 20px;
+  svg {
+    width: 60px;
+  }
 }
 .weather-report h4 {
   font-size: 3vh;
 }
 
 .weather-report h2 {
-  font-size: 5vh;
+  font-size: 20px;
+  font-family: $base-font;
+  color: #B2B2B2;
+  font-weight: 100;
+  margin-top: 0;
+}
+.weather-report .search-link {
+  text-decoration: none;
+  font-size: 13px;
+  color: #CCCCCC;
+  cursor: pointer;
+  &:hover {
+    color: #4C4C4C;
+  }
+}
+.no-result {
+  h3 {
+    color: #979797;
+    margin-top: 40px;
+  }
+}
+
+.search-wrapper .btn {
+  border-radius: 0 40px 40px 0;
+}
+
+#city {
+  border-radius: 40px 0 0 40px;
 }
 
 a {
