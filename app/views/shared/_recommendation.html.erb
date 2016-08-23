@@ -1,4 +1,4 @@
-<%= link_to recommendation_path(r) do%>
+<%= link_to recommendation_path(r), :class => "link" do%>
     <div class="row">
       <div class="col-xs-12 col-sm-9">
         <div class="card"><p><%= cl_image_tag(r.photo, :class => "img-responsive img-show") %></p>
@@ -7,7 +7,7 @@
           </div>
           <div class="card-category">
             <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
-            <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right" %>
+            <%= link_to "", "javascript:$('#bookmark_form_#{r.id}').submit()", :class => "glyphicon glyphicon-bookmark pull-right link" %>
             <% end %>
           </div>
           <div class="card-description">
@@ -18,7 +18,7 @@
 
           </div>
           <p class="card-user">
-            <%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right", :target => '_blank' %>
+            <%= link_to "Show me the way", "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w" , :class => "pull-right link", :target => '_blank' %>
           </p>
         </div>
       </div>
