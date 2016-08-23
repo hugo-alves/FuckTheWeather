@@ -1,24 +1,37 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@recommendation.photo, width: 1500, height: 600)%>');">
+  <div class="banner-content">
+    <h1><%= @recommendation.name %></h1>
+    <p><%= rating_for @recommendation, "rating", disabled: true, star_path: '/images/ratyrate' %></p>
+  </div>
+</div>
 
-<div id="mainContainer" class="container-fluid">
-  <div class="panel panel-default">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <div class="panel-heading"><%= @recommendation.name %></div>
-          <div class="panel-body">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <p><%= cl_image_tag(@recommendation.photo, class:"img-responsive img-show", :crop => :fill)%></p>
-              </div>
-              <div class="panel-body">
-                <p class="description"><%= @recommendation.description %> </p>
-                <p class="address">Address:</p> <%= @recommendation.address %>
-                <p class="category">Category: <%= @recommendation.category %> </p>
-                <p class="rating">Rating: <%= rating_for @recommendation, "rating", disabled: true, star_path: '/images/ratyrate' %> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container recommendation-show padded">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2>More infos about this place</h2>
+      <h3>Suitable for</h3>
+       <ul class="card-weather list-inline">
+          <li>
+            <% if @recommendation.weather_type == "clear"%>
+              <%= icon_weather("clear") %>
+            <% elsif @recommendation.weather_type == "clouds"%>
+              <%= icon_weather("clouds") %>
+            <% elsif @recommendation.weather_type == "rain"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("drizzle") %>
+              <%= icon_weather("rain") %>
+            <% elsif @recommendation.weather_type == "drizzle"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("drizzle") %>
+            <% elsif @recommendation.weather_type == "storm"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("drizzle") %>
+              <%= icon_weather("rain") %>
+              <%= icon_weather("thunderstorm") %>
+            <% end %>
+          </li>
+        </ul>
+      <p class="description"><%= @recommendation.description %> </p>
     </div>
   </div>
 </div>

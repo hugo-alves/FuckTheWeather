@@ -1,19 +1,37 @@
 
-<%= render 'shared/form' %>
 <div class="container" id="main">
   <div class="row">
     <div class="col-sm-12">
-      <div class="weather-report">
-        <h4>Weather conditions near you: <%= @weather["weather"][0]["main"] %></h4>
-        <h2>Here are some recommendations sorted by distance</h2>
+      <div class="weather-report text-center">
+        <%= icon_weather(@weather["weather"][0]["main"].downcase) %>
+        <h2>Here are what you can do on a <%= @weather["weather"][0]["main"].downcase %> day</h2>
+
+        <a data-toggle="collapse" data-target="#location-form" aria-expanded="false" aria-controls="collapseExample" class="search-link">
+          search for a new location
+        </a>
+        <% class_name = @recommendations.empty? ? "in" : "" %>
+        <div class="collapse <%= class_name %>" id="location-form">
+          <%= render 'shared/form' %>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
 <div class="container">
-	<% @recommendations.each do |r| %>
-		<%= render "shared/recommendation", r: r %>
-	<% end %>
+  <div class="row">
+  	<% @recommendations.each do |r| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+  		  <%= render "shared/recommendation", r: r %>
+      </div>
+  	<% end %>
+    <% if @recommendations.empty? %>
+      <div class="text-center no-result">
+        <%= icon_weather("cold") %>
+        <h3>Oups.... cold place here.. nothing to do</h3>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
