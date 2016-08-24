@@ -4,7 +4,7 @@
     <% @bookmarks.each do |book| %>
       <% book = book.recommendation %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= render 'shared/recommendation', r: book %>
+        <%= render 'shared/bookmarks', r: book %>
       </div>
     <% end %>
     <% if @bookmarks.empty? %>
