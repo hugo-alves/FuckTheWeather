@@ -1,0 +1,40 @@
+
+
+.list-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.text-profile {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px
+}
+
+.btn-profile {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  width: 110.44px;
+  border-radius: 3px;
+}
+
+.btn-profile:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  width: 110.44px;
+  border-radius: 3px;
+}
+
+.block-btn {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    color: #737373;
+}
+
