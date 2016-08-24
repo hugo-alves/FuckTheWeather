@@ -1,6 +1,16 @@
-<h1>These are your bookmarks</h1>
-
-<% @bookmarks.each do |book| %>
-  <% book = book.recommendation %>
-  <%= render 'shared/recommendation', r: book %>
-<% end %>
+<h1 class="text-center">These are your bookmarks</h1>
+<div class="container">
+  <div class="row">
+    <% @bookmarks.each do |book| %>
+      <% book = book.recommendation %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render 'shared/recommendation', r: book %>
+      </div>
+    <% end %>
+    <% if @bookmarks.empty? %>
+    <div class="text-center no-result">
+      <h3>Ops... You have no bookmarks</h3>
+    </div>
+    <% end %>
+  </div>
+</div>
