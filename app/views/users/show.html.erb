@@ -4,18 +4,14 @@
     <div class="text-left">
       <h2>Your profile</h2>
       <div class="user-info form-inputs"">
+      <div class="user-info">
+          <p><%= image_tag current_user.facebook_picture_url, class: "profile-image text-center"  %></p>
           <p class="text-profile">Email: </p>
           <p class="form-control" ><%= @user.email %></p>
           <p class="text-profile">First name:</p>
-          <p class="form-control"> <%= @user.name %></p>
-          <p class="text-profile">Second name:</p>
-          <p class="form-control" ><%= @user %></p>
-          <p class="text-profile">Address:</p>
-          <p class="form-control" ><%= @user %></p>
-          <p class="text-profile">Bairro:</p>
-          <p class="form-control" ><%= @user%></p>
-          <p class="text-profile">Other:</p>
-          <p class="form-control"><%= @user %></p>
+          <p> <%= @user.first_name %></p>
+          <p class="text-profile">Last name:</p>
+          <p><%= @user.last_name %></p>
       </div>
         <div class="block-btn">
         <ul class="list-inline list-link">
