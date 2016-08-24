@@ -1,9 +1,16 @@
-<h1>These are your ratings</h1>
-
-<div>
-  <% @rates.each do |r| %>
-    <h2>You gave <%= r.stars %> stars to this place</h2>
-    <% r = Recommendation.find(r.rateable_id) %>
-    <%= render 'shared/recommendation', r: r %>
-  <% end %>
+<h1 class="text-center">These are your ratings</h1>
+<div class="container">
+  <div class="row">
+    <% @rates.each do |r| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <% r = Recommendation.find(r.rateable_id) %>
+        <%= render 'shared/ratings', r: r %>
+      </div>
+    <% end %>
+    <% if @rates.empty? %>
+    <div class="text-center no-result">
+      <h3>Ops... You have no ratings</h3>
+    </div>
+    <% end %>
+  </div>
 </div>
