@@ -24,6 +24,12 @@ in your HTML file.
 license: MIT
 author: bootply.com
 */
+
+.profile-image {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
 .weather-report{
 	text-align: center;
 	padding-bottom: 20px;
@@ -94,69 +100,3 @@ body {
   text-decoration: none;
   color: white;
 }
-
-// .img-show {
-// 	width: 100%;
-// }
-
-
-
-// hr {border-color:#ececec;}
-// button {
-//  outline: 0;
-// }
-// textarea {
-//  resize: none;
-//  outline: 0;
-// }
-// .panel .btn i,.btn span{
-//  color:#666666;
-// }
-
-
-// .panel .panel-heading a {
-//  font-weight:400;
-//  font-size:11px;
-// }
-
-// .panel .panel-thumbnail {
-//  padding:0;
-// }
-
-// .list-group-item:first-child,.list-group-item:last-child {
-//  border-radius:0;
-// }
-// h3,h4,h5 {
-//  border:0 solid #efefef;
-//  border-bottom-width:1px;
-//  padding-bottom:10px;
-// }
-// .modal-dialog {
-//  width: 450px;
-// }
-// .modal-footer {
-//  border-width:0;
-// }
-// .dropdown-menu {
-//  background-color:#f4f4f4;
-//  border-color:#f0f0f0;
-//  border-radius:0;
-//  margin-top:-1px;
-// }
-// /* end theme */
-
-// /* template layout*/
-// #subnav {
-//  position:fixed;
-//  width:100%;
-// }
-
-// @media (max-width: 768px) {
-//  #subnav {
-//   padding-top: 6px;
-//  }
-// }
-
-// #main {
-//  padding-top:120px;
-// }
