@@ -19,7 +19,7 @@
   color: #333;
   background-color: #fff;
   border-color: #ccc;
-  width: 110.44px;
+  width: 111px;
   border-radius: 3px;
 }
 
@@ -27,7 +27,7 @@
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
-  width: 110.44px;
+  width: 111px;
   border-radius: 3px;
 }
 
@@ -36,5 +36,28 @@
     margin-top: 5px;
     margin-bottom: 100px;
     color: #737373;
+}
+
+.btn-edit-profil {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  width: 90px;
+  border-radius: 3px;
+}
+
+.btn-edit-profil:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  width: 90px;
+  border-radius: 3px;
+}
+
+.list-link-edit-profil {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
