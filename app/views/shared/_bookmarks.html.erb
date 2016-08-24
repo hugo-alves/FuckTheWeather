@@ -1,0 +1,66 @@
+<%= link_to recommendation_path(r), :class => "link" do%>
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="card-picture" style="background-image: url('<%= cl_image_path(r.photo, width: 500, height: 300) %>')">
+      <div class="card-hover">
+        <ul class="list-inline text-center hover-btns">
+          <li>
+            <%= link_to "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w", :target => '_blank'  do %>
+              <i class="fa fa-map"></i>
+            <% end %>
+            <h3>Go there</h3>
+          </li>
+          <li>
+            <%= link_to recommendation_path(r)  do %>
+              <i class="fa fa-eye"></i>
+            <% end %>
+            <h3>More infos</h3>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="card-infos">
+      <div class="card-title">
+        <h3><%= r.name.truncate(25) + "..." %></h3>
+        <p class="rating"><%= rating_for r, "rating", disabled: true, star_path: '/images/ratyrate' %></p>
+      </div>
+      <div>
+        <ul class="card-weather list-inline">
+          <li>
+            <% if r.weather_type == "clear"%>
+              <%= icon_weather("clear") %>
+            <% elsif r.weather_type == "clouds"%>
+              <%= icon_weather("clouds") %>
+            <% elsif r.weather_type == "rain"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("clouds") %>
+              <%= icon_weather("rain") %>
+            <% elsif r.weather_type == "drizzle"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("clouds") %>
+            <% elsif r.weather_type == "storm"%>
+              <%= icon_weather("clear") %>
+              <%= icon_weather("drizzle") %>
+              <%= icon_weather("rain") %>
+              <%= icon_weather("thunderstorm") %>
+            <% end %>
+          </li>
+        </ul>
+        <% if params[:latitude].present? %>
+          <div class="text-right distance">
+            <%= (r.distance_from([params[:latitude],params[:longitude]], :km) * 1000).round %> m <i class="fa fa-map-marker"></i>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+  </div>
+</div>
+
+
+<% end %>
