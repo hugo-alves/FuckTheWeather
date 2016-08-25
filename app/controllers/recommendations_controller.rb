@@ -2,6 +2,12 @@ require 'open_weather'
 
 class RecommendationsController < ApplicationController
   before_action :set_rec, only: [:show, :destroy, :update, :edit]
+
+  def letsencrypt
+    # use your code here, not mine
+    render text: "6-xBxTzqSvzFLhcf5ezd8pcyBIZX-2lYlcep452v9ac:"
+  end
+  
   def new
     @recommendation = Recommendation.new
   end
