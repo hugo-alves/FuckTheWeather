@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'user/show'
 
-  get '/.well-known/acme-challenge/:id' => 'recommendations#letsencrypt'
-
 
   post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users,
