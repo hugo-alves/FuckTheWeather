@@ -8,26 +8,25 @@
         <ul class="list-inline text-center hover-btns">
           <li>
             <%= form_tag recommendation_bookmarks_path(r), method: :post, id: "bookmark_form_#{r.id}" do %>
-              <%= link_to "javascript:$('#bookmark_form_#{r.id}').submit()" do %>
+              <%= link_to "javascript:$('#bookmark_form_#{r.id}').submit()", class: "disabled" do %>
                 <i class="fa fa-bookmark"></i>
               <% end %>
             <% end %>
             <h3>Save for later</h3>
           </li>
           <li>
-            <%= link_to "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w", :target => '_blank'  do %>
+            <%= link_to "http://maps.google.com/maps?saddr=#{params[:latitude]},#{params[:longitude]}&daddr=#{r.latitude},#{r.longitude}&ie=UTF8&dirflg=w", :target => '_blank', class: "disabled"  do %>
               <i class="fa fa-map"></i>
             <% end %>
             <h3>Go there</h3>
           </li>
           <li>
-            <%= link_to recommendation_path(r)  do %>
+            <%= link_to recommendation_path(r), class: "disabled"  do %>
               <i class="fa fa-eye"></i>
             <% end %>
             <h3>More info</h3>
           </li>
         </ul>
-
       </div>
     </div>
     <div class="card-infos">

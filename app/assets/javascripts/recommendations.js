@@ -11,3 +11,13 @@ $('#btnToggle').click(function(){
     $(this).addClass('on');
   }
 });
+
+
+$(function(){
+  $(".card-hover").click(function(e){
+    $(this).find("a").toggleClass("disabled");
+  });
+  $('.card-hover').on('click', 'a.disabled', function(event) {
+      event.preventDefault();
+  });
+})
