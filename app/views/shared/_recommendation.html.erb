@@ -66,8 +66,11 @@
     </div>
   </div>
   <div class="card-footer">
-    <img src="http://placehold.it/30x30" alt="" class="avatar">
-    <a href="#">Bob</a>
+    <% unless User.find(r.user_id).first_name.nil? %>
+      <%= image_path User.find(r.user_id).facebook_picture_url , class: "avatar" %>
+      <a href="#"><%= User.find(r.user_id).first_name %></a>
+    <% end %>
+
   </div>
 </div>
 
