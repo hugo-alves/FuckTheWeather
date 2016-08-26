@@ -21,7 +21,7 @@ class RecommendationsController < ApplicationController
     @type = @weather["weather"][0]["main"]
     case @type
     when "Clear"
-      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Sun" || place.weather_type.capitalize == "Rain" || place.weather_type.capitalize == "All"}
+      @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Sun" || place.weather_type.capitalize == "Rain" || place.weather_type.capitalize == "Clear"}
     when "Rain"
       @recommendations = Recommendation.near([params[:latitude], params[:longitude]], 1).select { |place| place.weather_type.capitalize == "Rain"}
     when "Thunderstorm"

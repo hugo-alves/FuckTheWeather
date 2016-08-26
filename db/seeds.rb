@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Recommendation.destroy_all
 Recommendation.create!(name: "Puppet Museum",
                    address: "Rua da Esperanca 146 Lisbon 1200-638, Portugal",
                    weather_type: "rain",
@@ -12,6 +13,7 @@ Recommendation.create!(name: "Puppet Museum",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "culture",
+                   user_id: 8,
                    rating: 4,
                    remote_photo_url: "http://www.cm-lisboa.pt/uploads/pics/tt_address/ASC_8052-Museu-Marioneta.jpg" )
 Recommendation.create!(name: "Atelier-Museu Julio Pomar",
@@ -21,6 +23,7 @@ Recommendation.create!(name: "Atelier-Museu Julio Pomar",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "architecture",
+                   user_id: 8,
                    rating: 5,
                    remote_photo_url: "http://jornalix.pt/wp-content/uploads/2016/01/AtelierMuseuJulioPomar_01-Copy.jpg")
 Recommendation.create!(name: "Igreja Santa Catarina",
@@ -30,6 +33,7 @@ Recommendation.create!(name: "Igreja Santa Catarina",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "religious",
+                   user_id: 8,
                    rating: 3,
                    remote_photo_url: "https://centroculturaldaponte.files.wordpress.com/2012/04/passeiolx201204c.jpg")
 Recommendation.create!(name: "Basilica da Estrela",
@@ -39,6 +43,7 @@ Recommendation.create!(name: "Basilica da Estrela",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "Church",
+                   user_id: 10,
                    rating: 5,
                    remote_photo_url: "http://static.viatecla.com/ezimut/share/2014-06/2014-06-25151016_b301f29c-bfab-444d-a00c-1e7a8c55278e$$DBDC69D3-8C43-4B75-BC1E-69612B5DAAAB$$1109542C-2846-44D9-B72F-0EBD98F2A23C$$LargeImage$$pt$$1.jpg")
 Recommendation.create!(name: "Academia das Ciências",
@@ -48,87 +53,95 @@ Recommendation.create!(name: "Academia das Ciências",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "culture",
+                   user_id: 10,
                    rating: 2,
                    remote_photo_url: "http://www.pavconhecimento.pt/roteiro3_locais_conhecimento/pt/img/01_academia_das_ciencias_b.jpg")
 Recommendation.create!(name: "Praca Marques do Pombal",
                    address: "Avenida da Liberdade Rotunda, Lisbonne, Portugal",
-                   weather_type: "sun",
+                   weather_type: "clear",
                    description: "It's a very big roundabout that symbolizes the center of Lisbon.
                     In the middle is the statue of Marques do Pombal ( the reason for the square name ) ,the Prime Minister of Portugal after the big earthquake in 1755 that destroyed Lisbon. He was the main responsable for the reconstraction and the way dowtown Lisbon looks now.
                     The square has a main subway station with connection to other lines and many of the bus lines in Lisbon pass the square.
                     It acesses Parque Eduardi VII ,one of the most beautiful in the city.
                     On the other side starts Avenida da Liberdade ,the most beautiful and expensive avenues in Lisbon.",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "culture",
+                   user_id: 5,
                    rating: 2,
                    remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lisboa_June_2013-9.jpg")
 
 Recommendation.create!(name: "Parque Eduardo VII",
                    address: "Avenida Sidónio País, Lisbonne 1070-051, Portugal",
-                   weather_type: "sun",
+                   weather_type: "clouds",
                    description: "This park is everything! It has a beautiful view and you can explore it all around. It's a bit hard to walk specially if it's really warm, it's a bit of a mountain but very beautiful. I've walked from the top of it till Baixa Chiado and it's was a very pleasant walk, we had some stops for water or ice cream but you'll see one of the most important streets, parks and squares in Lisbon.",
-                   bairro: "campo de ourique",
+                   bairro: "Avenidas novas",
                    day_time: "day",
                    category: "culture",
+                   user_id: 8,
                    rating: 2,
                    remote_photo_url: "http://magazine.guiadacidade.pt/wp-content/uploads/2014/09/2011-07-26_09-41-03_0032_resize.jpg")
 
 Recommendation.create!(name: "Pastelaria Marques Pombal",
                    address: "Avenida Duque de Loule 113 119, Lisbonne, Portugal",
-                   weather_type: "all",
+                   weather_type: "clear",
                    description: "This pastry shop/diner represents quintessential Lisbon to me. Hectic, lively, great service, frenetic, very friendly, inexpensive, tasty....did I say it had a great vibe! Cross an American diner with a boulangerie and you have an accurate picture in your head.",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "restaurant",
+                   user_id: 5,
                    rating: 2,
                    remote_photo_url: "http://www.brisanorte.pt/media/lojas/pombal.jpg")
 
 Recommendation.create!(name: "Confeitaria Marques do Pombal",
                    address: "Avenida Liberdade 244, Lisbonne 1250-149, Portugal",
-                   weather_type: "all",
+                   weather_type: "rain",
                    description: "Good standard of food and choice. Portion sizes good too
                     Didn't fall for the old Portuguese bread basket trick, you can refuse it ! :-)
                     Staff were helpful and attentive but atmosphere in this cafeteria style environment is sadly lacking.
                     A lot busier at lunchtime.
                     But overall a good place to grab a bite to eat",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "restaurant",
+                   user_id: 13,
                    rating: 2,
                    remote_photo_url: "http://img.pai.pt/mysite/media/29/76/2/09815f81-a419-481d-badf-02bd43da0ed0.png")
 
 Recommendation.create!(name: "Dote Cervejaria Moderna",
                    address: "Rua Barata Salgueiro 37A, Lisbonne 1250-042, Portugal",
-                   weather_type: "all",
+                   weather_type: "rain",
                    description: "We discovered this modernistic eatery by chance while strolling central Lisbon and were pleasantly surprised by the fine service, good wine and tasty offerings on the menu. We ate a nicely prepared sea bream and an excellent portion of gnocci with shrimps, washed down with a generous glass of the house vinho branco. The price was suitably reasonable for a fine midday lunch.",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "restaurant",
+                   user_id: 3,
                    rating: 2,
                    remote_photo_url: "http://www.nit.pt/uploads/article/8b0fa5a4-d088-496a-9566-501795b34eff.jpg")
 
 Recommendation.create!(name: "Sushi Cafe Avenida",
                    address: "Rua Barata Salgueiro 28, Lisbonne 1250-044, Portugal",
-                   weather_type: "all",
+                   weather_type: "rain",
                    description: "Groovey trendy interior plus outside verandah. Semi traditional Japanese menu with some fascinating Portuguese twists such as foie gras nigiri sushi. The food is very very good. The service is very good also except for one young lady who seemed bored with us/ annoyed with us/ or simply that's her way. All other staff interactions were fun and engaging.",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "restaurant",
+                   user_id: 3,
                    rating: 2,
                    remote_photo_url: "http://www.mood.pt/wp-content/uploads/2011/08/Sushi1.jpg")
 
 Recommendation.create!(name: "Guilty By Olivier",
                    address: "Rua Barata Salgueiro, 28, Lisboa, Portugal",
-                   weather_type: "all",
+                   weather_type: "clear",
                    description: "Stylish and cosy place.
                     Very friendly staff
                     Good food. (We had the hamburger and a pasta). If you are very hungry... We recommend you to order starter...and/of a dessert...
                     The good contemporary music gives it a trendy touch.
                     top...",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "restaurant",
+                   user_id: 13,
                    rating: 2,
                    remote_photo_url: "https://i.ytimg.com/vi/QNndn-wR0F4/maxresdefault.jpg")
 
@@ -137,9 +150,10 @@ Recommendation.create!(name: "Portuguese Cinematheque - Museum of Cinema",
                    weather_type: "rain",
                    description: "The best place to watch good movies in Lisbon.
                     No popcorn or obnoxious movie goers and a wide selection of movies from all over the world. Mostly classics and cult movies (even if obscure cult movies)",
-                   bairro: "campo de ourique",
+                   bairro: "Santo antónio",
                    day_time: "day",
                    category: "culture",
+                   user_id: 3,
                    rating: 2,
                    remote_photo_url: "http://cineuropa.org/imgCache/2013/08/21/1377077843833_0560x0342_1377481812640.jpg")
 
@@ -150,6 +164,35 @@ Recommendation.create!(name: "Reservatório da Mãe d'Água das Amoreiras",
                    bairro: "campo de ourique",
                    day_time: "day",
                    category: "culture",
+                   user_id: 8,
                    rating: 2,
                    remote_photo_url: "http://www.portugalsemfim.com/culturaelazer/images/stories/patrimonio_portugues/maedaguaamoreiras1.jpg")
+# User.create!(
+#     email: "goninja@gmail.com",
+#     bairro: "Campo ourique",
+#     name: "Alves",
+#     authentication_token: "cccccccc",
+#     password: "123456",
+#     facebook_picture_url: "https://dl.dropboxusercontent.com/u/99892820/female-users/women33-photo-by-Nicolas-Makropoulos.jpg",
+#     first_name: "Hugo",
+#     last_name: "Alves")
 
+# User.create!(
+#     email: "mad@gmail.com",
+#     bairro: "Santo antónio",
+#     name: "Madureira",
+#     authentication_token: "cccccccc",
+#     password: "123456",
+#     facebook_picture_url: "https://dl.dropboxusercontent.com/u/99892820/female-users/women33-photo-by-Nicolas-Makropoulos.jpg",
+#     first_name: "Charles",
+#     last_name: "Madureira")
+
+# User.create!(
+#     email: "tauanmiguel@gmail.com",
+#     bairro: "Santos",
+#     name: "Miguel",
+#     authentication_token: "cccccccc",
+#     password: "123456",
+#     facebook_picture_url: "https://dl.dropboxusercontent.com/u/99892820/female-users/women33-photo-by-Nicolas-Makropoulos.jpg",
+#     first_name: "Tauan",
+#     last_name: "Miguel")
