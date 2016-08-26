@@ -49,7 +49,7 @@
     <div class="navbar-wagon-item">
       <div class="dropdown">
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Register"), new_user_registration_path, class: "navbar-wagon-link btn btn-default" %>
+      <%= link_to t(".sign_in", default: "Register yourself"), new_user_registration_path, class: "navbar-wagon-link btn btn-default" %>
 
       <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn btn-default" %>
         </div>
@@ -60,9 +60,9 @@
 
     <!-- Dropdown list appearing on mobile only -->
   </div>
-      <div class="navbar-wagon-right hidden-md hidden-lg">
+    <div class="navbar-wagon-right hidden-md hidden-lg">
       <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown" href="#"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
 
         <% if user_signed_in? %>
