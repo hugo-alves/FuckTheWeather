@@ -67,7 +67,7 @@
   </div>
   <div class="card-footer">
     <% unless User.find(r.user_id).first_name.nil? %>
-      <%= image_path User.find(r.user_id).facebook_picture_url , class: "avatar" %>
+      <%= image_tag User.find(r.user_id).facebook_picture_url , class: "avatar" %>
       <a href="#"><%= User.find(r.user_id).first_name %></a>
     <% end %>
 
