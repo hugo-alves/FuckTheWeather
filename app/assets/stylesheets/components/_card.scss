@@ -34,8 +34,6 @@
   width: 23px;
   height: 23px;
 }
-
-
 .card-infos li {
   padding: 0 5px;
 }
@@ -68,6 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 1;
   ul {
     margin-left: auto;
     margin-right: auto;
@@ -95,8 +94,8 @@
 }
 .card-picture:hover .card-hover {
   opacity: 1;
+  z-index: 3;
 }
-
 .hover-btns {
   margin-top: 20px;
   h3 {

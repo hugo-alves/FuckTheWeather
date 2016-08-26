@@ -62,6 +62,8 @@ class RecommendationsController < ApplicationController
                                            :rating,
                                            :photo,
                                            :category,
+                                           :latitude,
+                                           :longitude,
                                            :description)
   end
 
