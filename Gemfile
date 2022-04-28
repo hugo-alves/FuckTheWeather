@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '4.2.6'
+gem 'rails', '5.2.7.1'
 gem 'puma', '>= 4.3.9'
 gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
-gem 'devise'
+gem 'devise', '>= 4.4.2'
 gem 'redis'
 
 gem 'sass-rails'
@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'uglifier'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem 'simple_form'
+gem 'simple_form', '>= 4.0.0'
 gem 'autoprefixer-rails'
 
 gem 'country_select'
@@ -26,7 +26,7 @@ gem 'carrierwave'
 
 gem 'ratyrate'
 gem "gmaps4rails"
-gem "coffee-rails"
+gem "coffee-rails", ">= 4.2.2"
 gem 'pundit'
 gem "simple_token_authentication"
 
