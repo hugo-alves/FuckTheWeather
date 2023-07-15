@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'rails_db'
+  gem 'rails_db', '>= 1.4.0'
 
 
 end
