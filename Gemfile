@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '4.2.6'
-gem 'puma', '>= 4.3.9'
+gem 'puma', '>= 5.6.8'
 gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
