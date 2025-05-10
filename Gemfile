@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '4.2.6'
+gem 'rails', '7.0.0'
 gem 'puma', '>= 4.3.9'
 gem 'pg'
 gem 'figaro'
@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
-gem 'sass-rails'
+gem 'sass-rails', '>= 6.0.0'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'bootstrap-sass'
@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'rails_db'
+  gem 'rails_db', '>= 2.3.0'
 
 
 end
