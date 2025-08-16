@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '4.2.6'
+gem 'rails', '7.1.5.2'
 gem 'puma', '>= 4.3.9'
 gem 'pg'
 gem 'figaro'
@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'rails_db'
+  gem 'rails_db', '>= 1.3.4'
 
 
 end
