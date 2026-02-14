@@ -18,7 +18,7 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 
 gem 'country_select'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 5.0.0'
 gem 'open-weather'
 gem 'geocoder'
 gem 'cloudinary', '1.1.0'
